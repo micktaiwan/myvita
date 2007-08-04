@@ -1,0 +1,6 @@
+<div class="descr" id="descr<%=descr.id%>">
+<%= link_to_remote( "Delete description", {:update => "descr"+descr.id.to_s, :url =>{ :action => :delete_descr, :id=>descr.id }, :loading  => visual_effect('appear', 'ind'+descr.step.id.to_s), :success => {visual_effect('fade', 'ind'+descr.step.id.to_s), visual_effect('fade','descr'+descr.id.to_s)}}, {:class=>"action"}) %>
+<%= link_to_remote( "Edit", {:update => "descr"+descr.id.to_s, :url =>{ :action => :edit_descr, :id=>descr.id }, :loading  => visual_effect('appear', 'ind'+descr.step.id.to_s), :success => visual_effect('fade', 'ind'+descr.step.id.to_s)}, {:class=>"action"}) %>
+<div class="title"><%= descr.title %></div>
+<div class="dcontent"><%= simple_format(descr.descr) %></div>
+</div>

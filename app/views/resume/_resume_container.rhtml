@@ -1,0 +1,5 @@
+<% @resume = resume_container %>
+<div id="ind<%=@resume.id%>" class="ind" style="display:none">Loading...</div>
+<div class="step" id="res<%=@resume.id%>">
+<%= render :partial => "resume", :locals=>{:resume=>@resume} -%>
+</div>

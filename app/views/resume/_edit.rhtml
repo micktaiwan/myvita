@@ -1,0 +1,19 @@
+<%= form_remote_tag(:id=>resume, :update => "res"+resume.id.to_s, :url => { :action => :update, :id=>resume.id }) %>
+<table>
+<tr><td>Name:</td><td><%= text_field :resume,:name %></td></tr>
+</table><br/>
+<p>Select the projects and/or descriptions you want to appears in this resume</p>
+
+
+<% for step in resume.user.steps %>
+<div class="project"><%= step.project %></div>
+	<% for d in step.descrs %>
+		<input type="checkbox" name="resume[descr_ids][]" 
+	          value="<%= d.id %>" 
+	          <% if resume.descrs.include?(d) %> checked="checked" <% end %> />
+		<%=d.title%><br/>
+	<% end %>
+<% end %>
+
+<%= submit_tag "Save" %>
+<%= end_form_tag %>

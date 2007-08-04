@@ -1,0 +1,16 @@
+<div class="resume">
+<div class="userinfos">
+<div class="username"><%=@resume.user.name%></div>
+</div>
+
+<% for s in @steps %>
+	<div class="project"><%=s.project%></div>
+	<div class="framework"><%=s.framework%></div>
+	<div class="dates"><%=s.startdate%> - <%=s.enddate%></div>
+	<% for descr in s.descrs %>
+		<% if @resume.descrs.include?(descr) %>
+			<div class="descr"><%= simple_format(descr.descr)%></div>
+		<% end %>
+	<% end %>
+<% end %>
+</div>

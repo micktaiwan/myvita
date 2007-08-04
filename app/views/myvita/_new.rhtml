@@ -1,0 +1,10 @@
+<div class="step" id="step<%=edit.id%>">
+<%= form_remote_tag(:id=>edit, :update => "step"+edit.id.to_s, :url => { :action => :save_changes, :id=>edit.id }, :loading  => visual_effect('appear', 'addind'), :success => visual_effect('fade', 'addind')) %>
+<table>
+<tr><td>Project:</td><td><%= text_field :edit,:project %></td><td>Give the name of the project</td></tr>
+<tr><td>Framework:</td><td><%= text_field :edit, :framework %></td><td>"School", "Work", "Microsoft", "University of Chicago", "With some friends"</td></tr>
+<tr><td>Period:</td><td><%= text_field :edit,:startdate, {:size=>10} %> to <%= text_field :edit, :enddate, {:size=>10} %></td><td>Enter the start and end date. Be consistent in your dates. You can write"Present" if there is no end date.</td></tr>
+</table>
+<%= submit_tag "Add" %>
+<%= end_form_tag %>
+</div>

@@ -1,0 +1,17 @@
+<h1>Welcome to your resume center</h1>
+
+<p>Buid several customized resumes from your projects.</p>
+
+<% if session['user'] == nil -%>
+<a href="/account/signup">Sign up for an account</a> to add your own projects.
+<%else-%>
+
+<%= link_to_remote( "Create a new resume", { :update => "list", :url =>{ :action => :new}, :position => :top, :loading  => visual_effect('appear', 'addind'), :success => visual_effect('fade', 'addind'), :position=>:top}, {:class=>'important'}) %>
+<div id="addind" class="ind" style="display:none">Loading...</div> 
+<div id="list">
+<%= render(:partial => "resume_container", :collection=>@col) %>
+</div>
+<p><br/></p>
+<p><a href="/myvita">Back to all your experiences</a></p>
+
+<% end -%>

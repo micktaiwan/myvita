@@ -1,0 +1,9 @@
+
+<%= form_remote_tag(:id=>edit, :update => "step"+edit.id.to_s, :url => { :action => :save_changes, :id=>edit.id }) %>
+<table>
+<tr><td>Project:</td><td><%= text_field :edit,:project %></td></tr>
+<tr><td>Framework:</td><td><%= text_field :edit, :framework %></td></tr>
+<tr><td>Period:</td><td><%= text_field :edit,:startdate, {:size=>10} %> to <%= text_field :edit, :enddate, {:size=>10} %></td></tr>
+</table>
+<%= submit_tag "Save changes" %>
+<%= end_form_tag %>

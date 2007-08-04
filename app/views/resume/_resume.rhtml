@@ -1,0 +1,9 @@
+<div class="action"><%= link_to_remote( "Delete resume", :update => "res"+resume.id.to_s, :url =>{ :action => :delete, :id=>resume.id }, :loading  => visual_effect('appear', 'ind'+resume.id.to_s), :success => {visual_effect('fade', 'ind'+resume.id.to_s),visual_effect('fade','res'+resume.id.to_s)}) %></div>
+<div class="action"><%= link_to_remote( "Edit", :update => "res"+resume.id.to_s, :url =>{ :action => :edit, :id=>resume.id }, :loading  => visual_effect('appear', 'ind'+resume.id.to_s), :success => visual_effect('fade', 'ind'+resume.id.to_s)) %></div>
+<div class="action"><%= link_to( "View", :action => :view, :id=>resume.id) %></div>
+<div class="project"><%=resume.name%></div>
+<p><%= resume.descrs.size %> descriptions</p>
+<% resume.descrs.each {|d| %>
+<p><%= d.step.project + ": " + d.title %></p>
+<% } %>
+

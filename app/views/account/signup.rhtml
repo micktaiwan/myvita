@@ -1,0 +1,19 @@
+<%= start_form_tag :action=> "signup" %>
+
+  <h2>Signup</h2>
+  <%= error_messages_for 'user' %><br/>
+  
+  <table>
+  <tr><td><label for="user_name">Your real name:</label></td>
+  <td><%= text_field "user", "name", :size => 15 %></td></tr>
+  <tr><td><label for="user_login">Desired login:</label></td>
+  <td><%= text_field "user", "login", :size => 15 %></td></tr>
+  <tr><td><label for="user_pwd">Choose password:</label></td>
+  <td><%= password_field "user", "pwd", :size => 15 %></td></tr>
+  <tr><td><label for="user_pwd_confirmation">Confirm password:</label></td>
+  <td><%= password_field "user", "pwd_confirmation", :size => 15 %></td></tr>
+  </table>
+
+<input type="submit" value="Signup &#187;" class="primary" />
+
+<%= end_form_tag %>

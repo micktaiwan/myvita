@@ -1,0 +1,63 @@
+<% cur = @controller.class.controller_path %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Mickael Faivre-Macon"/>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="/images/style.css" type="text/css" />
+	<!--<link rel="stylesheet" href="/images/round-button.css" type="text/css" />-->
+	<title>Vita - Manage your career</title>
+	<%= javascript_include_tag "prototype", "effects" %>
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<div class="top_info">
+				<div class="top_info_right">
+					<% if session['user'] == nil %>
+					<p><b>You're not logged in.</b><br />
+					Do you want to <a href="/account/login">Sign</a> or <a href="/account/signup">Register</a>?</p>
+					<% else %>
+					<p><b><%=@session['user']['name']%>, you're logged in.</b><br />
+					Do you want to <a href="/account/logout">log out</a> ?</p>
+					<% end %>
+				</div>		
+				<div class="top_info_left">
+					<p><b><%=Date.today%></b> - <%=Date::DAYS.index(Date.today.wday).capitalize%></p>
+				</div>
+			</div>
+			<div class="logo">
+				<h1 style="padding: 0"><a href="/" title="Vita"><img src="/images/people.png"/ style="vertical-align:top;margin: 0 10px 0 10px;"><span class="dark">My</span>Vita</a></h1>
+			</div>
+		</div>
+	
+		<div class="bar">
+			<ul style="list-style : none;">
+				<li class="browse_category">Navigation:</li>
+				<%if cur=='welcome' then%><li class="active">Dashboard</li><%else%><li><a href="/">Dashboard</a></li><%end%>
+				<%if cur=='myvita' then%><li class="active">Projects</li><%else%><li><a href="/myvita">Projects</a></li><%end%>
+				<%if cur=='resume' then%><li class="active">Resumes</li><%else%><li><a href="/resume">Resumes</a></li><%end%>
+			</ul>
+		</div>
+<p style="color: green"><%= flash[:notice] %></p>
+<!--      
+		<div class="search_field">
+			<form method="post" action="?">
+				<div class="search_form">
+				<p>Search the Web: <input type="text" name="search" class="search" /> <input type="submit" value="Search" class="submit" /> <a class="grey" href="#">Advanced</a></p>
+				</div>
+			</form>
+			
+			<p>Please <a href="#">Sign in</a> or <a href="#">Register</a></p>
+		</div>
+-->	
+		<%= @content_for_layout %><br/>
+		<br/>
+		<div class="footer">
+			<!-- <p><a href="#">RSS Feed</a> | <a href="#">Contact</a> | <a href="#">Accessibility</a> | <a href="#">Products</a> | <a href="#">Disclaimer</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a><br /> -->
+			&copy; Copyright 2007 Vita. Design: Luka Cvrk - <a href="http://www.solucija.com/" title="What's your solution?">Solucija</a></p>
+		</div>
+	</div>
+</body>
+</html>
