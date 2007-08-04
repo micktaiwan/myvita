@@ -1,0 +1,20 @@
+<h1>Welcome to your projects center</h1>
+
+<p>This screen list <i>all</i> your projects. You will be able to customize it for a particuliar position in the next screen.
+You can come back here at any moment by clicking on the <i>Projects</i> menu above</p>
+
+<p>You are going to build a resume to show your competences. You must think "project oriented". The important thing is the project you build during your university time, not the university you were in.</p>
+
+<% if session['user'] == nil -%>
+<a href="/account/signup">Sign up for an account</a> to add your own projects.
+<%else-%>
+
+<%= link_to_remote( "Add a project", { :update => "list", :url =>{ :action => :new}, :position => :top, :loading  => visual_effect('appear', 'addind'), :success => visual_effect('fade', 'addind')}, {:class=>'important'}) %>
+<div id="addind" class="ind" style="display:none">Loading...</div> 
+			 
+<div id="list">
+<%= render(:partial => "step_container", :collection=>@steps) %>
+</div>
+<p><br/></p>
+<p><a href="/resume">Next: Build a resume</a></p>
+<% end -%>

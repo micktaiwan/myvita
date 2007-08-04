@@ -1,0 +1,9 @@
+<% @d = descr_edit%>
+<!-- <div class="project"><%= @d.step.project %></div> -->
+<%= form_remote_tag(:id=>@d, :update => "step"+@d.step.id.to_s, :url => { :action => :save_descr, :id=>@d.id }, :loading  => visual_effect('appear', 'ind'+@d.id.to_s), :success => visual_effect('fade', 'ind'+@d.id.to_s)) %>
+<table>
+<tr><td>Description Title:</td><td><%= text_field :d,:title %></td><td>Enter a title for a first description. You can enter several description and choose one when you build your resume</td></tr>
+<tr><td>Description Content:</td><td><%= text_area :d,:descr %></td><td></td></tr>
+</table>
+<%= submit_tag "Save Description" %>
+<%= end_form_tag %>

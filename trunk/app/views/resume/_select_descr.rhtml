@@ -1,0 +1,8 @@
+<%	steps = select_descr %>
+<div class="project"><%= steps.project %></div>
+<% for d in steps.descrs %>
+<input type="checkbox" name="resume[descr_ids][]" 
+          value="<%= d.id %>" 
+          <% if resume.descrs.include?(steps) %> checked="checked" <% end %> />
+ <%=d.title%><br/>
+<% end %>

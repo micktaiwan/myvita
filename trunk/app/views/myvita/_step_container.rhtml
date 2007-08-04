@@ -1,0 +1,5 @@
+<% s = step_container %>
+<div id="ind<%=s.id%>" class="ind" style="display:none">Loading...</div>
+<div class="step" id="step<%=s.id%>">
+<%= render :partial => "step", :locals=>{:step=>s} -%>
+</div>

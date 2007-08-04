@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Luka Cvrk (www.solucija.com)" />
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="images/style.css" type="text/css" />
+	<title>My Pet Services</title>
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<div class="top_info">
+				<div class="top_info_right">
+					<p><b>Vous n'etes pas identifie!</b><br />
+					Voulez-vous <a href="#">Signer</a> ou <a href="#">vous enregistrer</a>?</p>
+				</div>		
+				<div class="top_info_left">
+					<p><b>8 Mai 2006</b> - Dimanche<br />
+					Voir vos <a href="#">derniers contacts</a></p>
+				</div>
+			</div>
+			<div class="logo">
+				<h1><a href="#" title="30 millions d'amis"><span class="dark">Pet</span>Services</a></h1>
+			</div>
+		</div>
+		
+		<div class="bar">
+			<ul>
+				<li class="browse_category">Navigation:</li>
+				<li><a href="#" accesskey="i">Quels</a></li>
+				<li class="active">Sont</li>
+				<li><a href="#" accesskey="m">Les</a></li>
+				<li><a href="#" accesskey="p">Pages</a></li>
+				<li><a href="#" accesskey="s">Du</a></li>
+				<li><a href="#" accesskey="r">Site?</a></li>
+			</ul>
+		</div>
+<!--      
+		<div class="search_field">
+			<form method="post" action="?">
+				<div class="search_form">
+				<p>Search the Web: <input type="text" name="search" class="search" /> <input type="submit" value="Search" class="submit" /> <a class="grey" href="#">Advanced</a></p>
+				</div>
+			</form>
+			
+			<p>Please <a href="#">Sign in</a> or <a href="#">Register</a></p>
+		</div>
+-->	
+		<div class="left">
+			<h3>Dernieres nouvelles:</h3>
+			<div class="left_box">
+				<img src="images/kids-puppies.jpg" class="image" alt="kids" />
+				<h2>Pour nos amis</h2>
+				<p>Faudra que tu ecrives les textes aussi.</p>
+            <p>Il faudrait aussi que les inscrits puissent ecrire des articles. IL faut reflechir si on a besoin d'un systeme de validation, etc...
+            pas maintenant mais a garder comme une idee.</p>
+				<p>D'ailleurs pour noter toutes nos idees il nous faut un site comme <a href="http://www.basecamphq.com/">Basecamp</a>.</p>
+            <p>Je pense aussi qu'il faudrait baser notre design sur la localisation (au sens francais) c'est a dire demander ou se situe le service et le pet (Toulouse, Paris, ailleurs).
+            C'est a ce moment la que le site pourra prendre de l'importance.</p>
+            <p>Bien sur je ne fais que partager des idees jetees en l'air. Et puis si on a trop d'idees on peut tres bien perdre le 
+            point focal du site que sont les services autour des animaux domestiques. En plus il est 1h30 du mat alors hein bon.</p>
+			</div>
+	
+			<h3>Web Directory</h3>
+				<div class="left_side">
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Arts</a></b><br />
+					<a href="#">Music</a>, <a href="#">Television</a>, <a href="#">Movies</a>...</p>
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Computers</a></b><br />
+					<a href="#">Internet</a>, <a href="#">Software</a>, <a href="#">Hardware</a>...</p>
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Shopping</a></b><br />
+					<a href="#">Autos</a>, <a href="#">Clothing</a>, <a href="#">Gifts</a>...</p>
+				</div>
+				<div class="right_side">
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Business</a></b><br />
+					<a href="#">Jobs</a>, <a href="#">Real Estate</a>, <a href="#">Investing</a>...</p>
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Health</a></b><br />
+					<a href="#">Fitness</a>, <a href="#">Medicine</a>, <a href="#">Alternative</a>...</p>
+					<p><b><img src="images/arrow.gif" alt=">" /><a class="title" href="#">Sports</a></b><br />
+					<a href="#">Baseball</a>, <a href="#">Basketball</a>, <a href="#">Soccer</a>...</p>
+				</div>
+				
+<!--
+			<h3>Colaboration:</h3>
+			<div class="left_box">
+			<img src="images/cat01.jpg" class="image" alt="Big Image" />
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi <a href="#">enim ad minim</a> veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">Duis autem</a> vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.<a href="#">Duis autem</a> vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.</p>
+			</div>
+-->
+		</div>	
+		<div class="right">
+			<h3>Articles:</h3>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Les meilleures promenades</b><br /> Ou se promener a Toulouse avec son chien ?</p>
+			</div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Les bons plans propres</b><br />Les bonnes adresses pour la toilette de votre meilleur ami</p>
+			</div>
+         <br/>
+			<h3>Vos contacts:</h3>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Agku</b><br />Golden Retreiver<br/>3 ans<br/></p>
+			</div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+		</div>	
+		<div class="footer">
+			<p><a href="#">RSS Feed</a> | <a href="#">Contact</a> | <a href="#">Accessibility</a> | <a href="#">Products</a> | <a href="#">Disclaimer</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a><br />
+			&copy; Copyright 2006 Pet Services, Design: Luka Cvrk - <a href="http://www.solucija.com/" title="What's your solution?">Solucija</a></p>
+		</div>
+	</div>
+</body>
+</html>

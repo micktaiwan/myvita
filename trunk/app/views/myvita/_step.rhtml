@@ -1,0 +1,11 @@
+<div class="framework"><%=step.framework%></div>
+<div class="project"><%=step.project%></div>
+<div class="action"><%= link_to_remote( "Delete project", :update => "step"+step.id.to_s, :url =>{ :action => :delete, :id=>step.id }, :loading  => visual_effect('appear', 'ind'+step.id.to_s), :success => {visual_effect('fade', 'ind'+step.id.to_s),visual_effect('fade','step'+step.id.to_s)}) %></div>
+<div class="action"><%= link_to_remote( "Edit", :update => "step"+step.id.to_s, :url =>{ :action => :edit, :id=>step.id }, :loading  => visual_effect('appear', 'ind'+step.id.to_s), :success => visual_effect('fade', 'ind'+step.id.to_s)) %></div>
+<div class="time"><%=step.startdate%> - <%=step.enddate%></div>
+<%= link_to_remote( "Add a description", :update => "new_descr"+step.id.to_s, :url =>{ :action => :add_descr, :sid=>step.id }, :loading  => visual_effect('appear', 'ind'+step.id.to_s), :success => visual_effect('fade', 'ind'+step.id.to_s)) %>
+<div id="new_descr<%=step.id%>"></div> 
+<%if step.descrs_count>0%><a href="#" onclick="Element.toggle('descr_list<%=step.id%>');return false;">Show descriptions (<%=step.descrs_count%>)</a><%end%>
+<div id="descr_list<%=step.id%>" style="display:none;">
+<%= render :partial => "descr", :collection=>step.descrs -%>
+</div>
