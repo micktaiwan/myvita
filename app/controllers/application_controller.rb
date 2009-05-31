@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   session :session_key => '_opendiploma_session_id'
   layout 'general'
   include LoginSystem
-  model :user
   
   before_filter :disable_link_prefetching
    
